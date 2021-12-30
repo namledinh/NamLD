@@ -51,6 +51,7 @@ namespace calculator
                 case "-": pheptoan = PhepToan.Tru; break;
                 case "*": pheptoan = PhepToan.Nhan; break;
                 case "/": pheptoan = PhepToan.Chia; break;
+                case "√": pheptoan = PhepToan.Can; break;
             }
 
             Nho = double.Parse(lblDisplay.Text);
@@ -68,6 +69,7 @@ namespace calculator
                 case PhepToan.Tru: ketqua = Nho - tam; break;
                 case PhepToan.Nhan: ketqua = Nho * tam; break;
                 case PhepToan.Chia: ketqua = Nho / tam; break;
+                case PhepToan.Can: ketqua = Math.Sqrt(Nho); break;
             }
             lblDisplay.Text = ketqua.ToString();
         }
